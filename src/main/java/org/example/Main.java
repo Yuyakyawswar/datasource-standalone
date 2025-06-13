@@ -10,7 +10,19 @@ public class Main {
         context.registerShutdownHook();
 
         EmployeeService service = context.getBean(EmployeeService.class);
-        service.listEmail().forEach(System.out::println);
+        // service.listEmail().forEach(System.out::println);
+
+        service.findAllEmployees().forEach(System.out::println);
+
+        System.out.println();
+
+        System.out.println("Average Salary for Employee :: " +
+                service.averageByRowCallbackHandler());
+
+        System.out.println();
+
+        System.out.println("Average salary from employee by using result set extractor :: " +
+                service.averageByResultSetExtractor());
     }
 
 }
