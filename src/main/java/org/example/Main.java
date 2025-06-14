@@ -23,6 +23,10 @@ public class Main {
 
         System.out.println("Average salary from employee by using result set extractor :: " +
                 service.averageByResultSetExtractor());
+
+        System.out.println();
+        System.out.println("Find employee ID by email :: " +
+                service.findEmployeeIdByEmail("john@gmail.com"));
     }
 
 }
